@@ -1,6 +1,5 @@
 package com.example.bfjavaserver.models;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,8 +8,8 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "amount_measurements")
-public class AmountMeasurement {
+@Table(name = "price_measurements")
+public class PriceMeasurement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
