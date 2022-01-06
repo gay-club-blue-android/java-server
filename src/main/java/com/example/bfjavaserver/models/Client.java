@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -27,12 +27,13 @@ public class Client {
     @Column
     public String password;
 
+    @Transient
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "favourites_clients_products",
             joinColumns = { @JoinColumn(name = "client_id") },
             inverseJoinColumns = { @JoinColumn(name = "product_id") }
     )
-    public List<Product> favouriteProducts;
+    public Set<Product> favouriteProducts;
 
 }
