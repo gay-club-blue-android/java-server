@@ -20,8 +20,4 @@ public class ProductCategory {
 
     @Column(name = "photo_path")
     public String photoPath;
-
-    @Transient
-    @OneToMany(mappedBy = "product_category")
-    public Set<Product> products;
 }
