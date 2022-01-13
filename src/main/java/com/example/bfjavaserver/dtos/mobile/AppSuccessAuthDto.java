@@ -1,10 +1,10 @@
 package com.example.bfjavaserver.dtos.mobile;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-public class ClientSuccessAuthDto {
-    public String firstName;
-    public String lastName;
+@AllArgsConstructor
+public class AppSuccessAuthDto {
     public String apiKey;
 }
