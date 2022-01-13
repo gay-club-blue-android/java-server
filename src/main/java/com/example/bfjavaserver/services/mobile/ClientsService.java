@@ -4,9 +4,13 @@ import com.example.bfjavaserver.dtos.mobile.ClientRequestAuthDto;
 import com.example.bfjavaserver.dtos.mobile.ClientSuccessAuthDto;
 import com.example.bfjavaserver.models.Client;
 import com.example.bfjavaserver.repositories.ClientsRepository;
+import com.google.common.hash.Hashing;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Date;
 
 @Service
 public class ClientsService {
@@ -27,7 +31,14 @@ public class ClientsService {
         Client foundClient = clientsRepository.findByEmailAndPassword(clientRequestAuthDto.email, clientRequestAuthDto.password);
 
         ClientSuccessAuthDto clientSuccessAuthDto = modelMapper.map(foundClient, ClientSuccessAuthDto.class);
-        clientSuccessAuthDto.apiKey = "jskdbfjkshdbfjksbd";//create hash from email + password + timestamp
+
+        String dataForHash = foundClient.email + foundClient.password + new Date();
+
+        String apiKey = Hashing.sha256()
+                .hashString(dataForHash, StandardCharsets.UTF_8)
+                .toString();
+
+        clientSuccessAuthDto.apiKey = apiKey;
 
         return clientSuccessAuthDto;
     }
