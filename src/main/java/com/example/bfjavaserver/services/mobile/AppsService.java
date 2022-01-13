@@ -42,7 +42,7 @@ public class AppsService {
         App foundApp = appsRepository.findByLoginAndPassword(appRequestAuthDto.login, appRequestAuthDto.password);
 
         long timestamp = currentTimeMillis();
-        String dataForHash = foundApp.login + foundApp.password + timestamp;
+        String dataForHash = foundApp.login + foundApp.password + timestamp;//add device id to hash
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 
