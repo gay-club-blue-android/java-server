@@ -29,5 +29,5 @@ public class AppApiKey {
     public App app;
 
     @Column(name = "device_id")
-    public String device_id;
+    public String deviceId;
 }
