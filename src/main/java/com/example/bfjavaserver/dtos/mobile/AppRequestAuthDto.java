@@ -6,4 +6,5 @@ import lombok.Data;
 public class AppRequestAuthDto {
     public String login;
     public String password;
+    public String device_id;
 }

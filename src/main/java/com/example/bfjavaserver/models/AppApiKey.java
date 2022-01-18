@@ -27,4 +27,7 @@ public class AppApiKey {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name="app_id")
     public App app;
+
+    @Column(name = "device_id")
+    public String device_id;
 }

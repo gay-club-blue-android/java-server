@@ -24,5 +24,9 @@ public class App {
 
     @Column
     public String description;
+
+    @Column
+    public String device_id;
+
 }
 

@@ -39,16 +39,16 @@ public class AppsService {
 
     public AppSuccessAuthDto authByLoginAndPassword(AppRequestAuthDto appRequestAuthDto) throws Exception {
 
-        App foundApp = appsRepository.findByLoginAndPassword(appRequestAuthDto.login, appRequestAuthDto.password);
+        App foundApp = appsRepository.findByLoginAndPassword(appRequestAuthDto.login, appRequestAuthDto.password, appRequestAuthDto.device_id);
 
         long timestamp = currentTimeMillis();
-        String dataForHash = foundApp.login + foundApp.password + timestamp;//add device id to hash
+        String dataForHash = foundApp.login + foundApp.password +foundApp.device_id + timestamp;//add device id to hash
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 
         long finishTime = timestamp + 86400 * 1000;
 
-        AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp);
+        AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp, foundApp.device_id);
         appsApiKeysRepository.saveAndFlush(appApiKey);
 
         return new AppSuccessAuthDto(apiKey);
