@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class AppSuccessAuthDto {
+public class AppAuthResponseDto {
     public String apiKey;
 }
