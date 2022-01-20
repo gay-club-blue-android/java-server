@@ -14,8 +14,9 @@ import java.util.ArrayList;
 public class FaqsService {
     @Autowired
     private final FaqsRepository faqsRepository;
-    public FaqResponseDto getAll(){
-        ArrayList<Faq> faqs=new ArrayList<>(faqsRepository.findAll());
+
+    public FaqResponseDto getAll() {
+        ArrayList<Faq> faqs = (ArrayList<Faq>) faqsRepository.findAll();
         return new FaqResponseDto(faqs);
     }
 }
