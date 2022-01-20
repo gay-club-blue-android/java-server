@@ -4,5 +4,5 @@ import com.example.bfjavaserver.models.AppApiKey;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AppsApiKeysRepository extends JpaRepository<AppApiKey, Integer> {
-    AppApiKey findByKey(String key);
+    boolean existsByKeyAndDeviceId(String key, String deviceId);
 }
