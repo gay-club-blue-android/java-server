@@ -19,7 +19,8 @@ public class ProductsCategoriesController {
     private final AppsApiKeysService appsApiKeysService;
 
     @GetMapping(value = "/getAll")
-    public ProductsCategoriesResponseDto getAll(@RequestHeader("API_KEY") String apiKey, @RequestHeader("DEVICE_ID") String deviceId) throws Exception {
+    //public ProductsCategoriesResponseDto getAll(@RequestHeader("API_KEY") String apiKey, @RequestHeader("DEVICE_ID") String deviceId) throws Exception
+    public ProductsCategoriesResponseDto getAll() throws Exception {
 
         /*boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
         if (exist == false) {
