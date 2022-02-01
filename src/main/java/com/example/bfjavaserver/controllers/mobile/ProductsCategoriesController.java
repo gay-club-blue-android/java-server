@@ -22,7 +22,7 @@ public class ProductsCategoriesController {
     public ProductsCategoriesResponseDto getAll(@RequestHeader("API_KEY") String apiKey, @RequestHeader("DEVICE_ID") String deviceId) throws Exception {
 
         boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
-        if(exist == false){
+        if (exist == false) {
             throw new Exception("key error");
         }
 
