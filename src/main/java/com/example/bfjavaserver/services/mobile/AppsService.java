@@ -1,5 +1,7 @@
 package com.example.bfjavaserver.services.mobile;
 
+import com.example.bfjavaserver.controllers.shared.AuthException;
+import com.example.bfjavaserver.controllers.shared.FatalException;
 import com.example.bfjavaserver.controllers.shared.LogicException;
 import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
 import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
@@ -32,13 +34,17 @@ public class AppsService {
 
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
-        /*if (appAuthRequestDto.login.equals("") ||
-                appAuthRequestDto.password.equals("") ||
-                appAuthRequestDto.deviceId.equals("")) {
-            throw new LogicException("empty field: login or password or deviceId");
-        }*/
+        App foundApp = null;
 
-        App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
+        try {
+            foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
+        } catch (Exception e) {
+            throw new FatalException("db connection error");
+        }
+
+        if (foundApp == null) {
+            throw new AuthException("user not found");
+        }
 
         long timestamp = currentTimeMillis();
 

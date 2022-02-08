@@ -19,7 +19,6 @@ public class AppsController {
 
     @PostMapping(value = "/authByLoginAndPassword")
     public AppAuthResponseDto authByLoginAndPassword(@RequestBody @Valid AppAuthRequestDto appAuthRequestDto) throws Exception {
-        return new AppAuthResponseDto("111");
-        //appsService.authByLoginAndPassword(appAuthRequestDto);
+        return appsService.authByLoginAndPassword(appAuthRequestDto);
     }
 }
