@@ -18,7 +18,9 @@ public class ExceptionsController {
     @ExceptionHandler(LogicException.class)
     public ResponseEntity<ExceptionResponseDto> handleException(LogicException e) {
         ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.getMessage());
-        return new ResponseEntity<>(exceptionResponseDto, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(exceptionResponseDto, HttpStatus.BAD_REQUEST);//maybe 403 error
     }
+
+    //for plain exception class
 
 }
