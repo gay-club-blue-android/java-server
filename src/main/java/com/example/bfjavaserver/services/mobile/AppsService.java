@@ -1,5 +1,6 @@
 package com.example.bfjavaserver.services.mobile;
 
+import com.example.bfjavaserver.controllers.shared.LogicException;
 import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
 import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
 import com.example.bfjavaserver.models.App;
@@ -31,11 +32,17 @@ public class AppsService {
 
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
+        /*if (appAuthRequestDto.login.equals("") ||
+                appAuthRequestDto.password.equals("") ||
+                appAuthRequestDto.deviceId.equals("")) {
+            throw new LogicException("empty field: login or password or deviceId");
+        }*/
+
         App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
 
         long timestamp = currentTimeMillis();
 
-        String dataForHash = foundApp.login + foundApp.password +appAuthRequestDto.deviceId + timestamp;//add device id to hash
+        String dataForHash = foundApp.login + foundApp.password + appAuthRequestDto.deviceId + timestamp;//add device id to hash
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 

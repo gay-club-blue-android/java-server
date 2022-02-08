@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping(path = "/mobile/apps", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @AllArgsConstructor
@@ -16,7 +18,8 @@ public class AppsController {
     private final AppsService appsService;
 
     @PostMapping(value = "/authByLoginAndPassword")
-    public AppAuthResponseDto authByLoginAndPassword(@RequestBody AppAuthRequestDto appAuthRequestDto) throws Exception {
-        return appsService.authByLoginAndPassword(appAuthRequestDto);
+    public AppAuthResponseDto authByLoginAndPassword(@RequestBody @Valid AppAuthRequestDto appAuthRequestDto) throws Exception {
+        return new AppAuthResponseDto("111");
+        //appsService.authByLoginAndPassword(appAuthRequestDto);
     }
 }
