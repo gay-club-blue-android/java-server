@@ -10,24 +10,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class ExceptionsController {
 
-    @ExceptionHandler(FatalException.class)
-    public ResponseEntity<ExceptionResponseDto> handleException(FatalException e) {
-        ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.getMessage());
-        return new ResponseEntity<>(exceptionResponseDto, HttpStatus.INTERNAL_SERVER_ERROR);
+    @ExceptionHandler(CustomException.class)
+    public ResponseEntity<ExceptionResponseDto> handleException(CustomException e) {
+        ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.toString());
+        return new ResponseEntity<>(exceptionResponseDto, e.getHttpStatus());
     }
-
-    @ExceptionHandler(LogicException.class)
-    public ResponseEntity<ExceptionResponseDto> handleException(LogicException e) {
-        ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.getMessage());
-        return new ResponseEntity<>(exceptionResponseDto, HttpStatus.FORBIDDEN);
-    }
-
-    @ExceptionHandler(AuthException.class)
-    public ResponseEntity<ExceptionResponseDto> handleException(AuthException e) {
-        ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.getMessage());
-        return new ResponseEntity<>(exceptionResponseDto, HttpStatus.UNAUTHORIZED);
-    }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponseDto> handleException(Exception e) {
         ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.toString());

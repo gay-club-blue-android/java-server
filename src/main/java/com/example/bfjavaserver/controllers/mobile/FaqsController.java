@@ -1,5 +1,6 @@
 package com.example.bfjavaserver.controllers.mobile;
 
+import com.example.bfjavaserver.controllers.shared.CustomException;
 import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
 import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
 import com.example.bfjavaserver.dtos.mobile.FaqResponseDto;
@@ -26,7 +27,7 @@ public class FaqsController {
 
         boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
         if(exist == false){
-            throw new Exception("key error");
+            throw CustomException.LogicException("key error");
         }
 
         return faqsService.getAll();
