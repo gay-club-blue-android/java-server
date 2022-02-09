@@ -13,9 +13,7 @@ public class CustomException extends Exception {
     }
 
     public <T extends Exception>CustomException(T exception, HttpStatus httpStatus)  {
-        super(exception.getMessage());
-        exceptionName=exception.getClass().getName();
-        this.httpStatus = httpStatus;
+        this(exception.getClass().getName(),exception.getMessage(),httpStatus);
     }
 
     public HttpStatus getHttpStatus() {
