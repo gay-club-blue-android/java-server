@@ -1,5 +1,6 @@
 package com.example.bfjavaserver.services.mobile;
 
+import com.example.bfjavaserver.controllers.shared.CustomException;
 import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
 import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
 import com.example.bfjavaserver.models.App;
@@ -31,11 +32,21 @@ public class AppsService {
 
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
-        App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
+        App foundApp = null;
+
+        try {
+            foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
+        } catch (Exception e) {
+            throw CustomException.FatalException("db connection error");
+        }
+
+        if (foundApp == null) {
+            throw CustomException.AuthException("User not found");
+        }
 
         long timestamp = currentTimeMillis();
 
-        String dataForHash = foundApp.login + foundApp.password +appAuthRequestDto.deviceId + timestamp;//add device id to hash
+        String dataForHash = foundApp.login + foundApp.password + appAuthRequestDto.deviceId + timestamp;//add device id to hash
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 

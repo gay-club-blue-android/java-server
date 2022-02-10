@@ -1,5 +1,6 @@
 package com.example.bfjavaserver.controllers.mobile;
 
+import com.example.bfjavaserver.controllers.shared.CustomException;
 import com.example.bfjavaserver.dtos.mobile.ProductsCategoriesResponseDto;
 import com.example.bfjavaserver.services.mobile.AppsApiKeysService;
 import com.example.bfjavaserver.services.mobile.ProductsCategoriesService;
@@ -23,7 +24,7 @@ public class ProductsCategoriesController {
 
         boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
         if (exist == false) {
-            throw new Exception("key error");
+            throw CustomException.LogicException("key error");
         }
 
         return productsCategoriesService.getAll();
