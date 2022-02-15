@@ -19,17 +19,8 @@ public class FaqsController {
     @Autowired
     private final FaqsService faqsService;
 
-    @Autowired
-    private final AppsApiKeysService appsApiKeysService;
-
     @GetMapping(value = "/getAll")
-    public FaqResponseDto getAll(@RequestHeader("API_KEY") String apiKey, @RequestHeader("DEVICE_ID") String deviceId) throws Exception {
-
-        boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
-        if(exist == false){
-            throw CustomException.LogicException("key error");
-        }
-
+    public FaqResponseDto getAll() throws Exception {
         return faqsService.getAll();
     }
 }

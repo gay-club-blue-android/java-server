@@ -16,17 +16,8 @@ public class ProductsCategoriesController {
     @Autowired
     private final ProductsCategoriesService productsCategoriesService;
 
-    @Autowired
-    private final AppsApiKeysService appsApiKeysService;
-
     @GetMapping(value = "/getAll")
-    public ProductsCategoriesResponseDto getAll(@RequestHeader("API_KEY") String apiKey, @RequestHeader("DEVICE_ID") String deviceId) throws Exception {
-
-        boolean exist = appsApiKeysService.existsByKeyAndDeviceId(apiKey, deviceId);
-        if (exist == false) {
-            throw CustomException.LogicException("key error");
-        }
-
+    public ProductsCategoriesResponseDto getAll() throws Exception {
         return productsCategoriesService.getAll();
     }
 }
