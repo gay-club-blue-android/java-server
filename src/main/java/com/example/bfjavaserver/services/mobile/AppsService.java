@@ -41,12 +41,12 @@ public class AppsService {
         }
 
         if (foundApp == null) {
-            throw CustomException.AuthException("User not found");
+            throw CustomException.AuthException("App credentials not found");
         }
 
         long timestamp = currentTimeMillis();
 
-        String dataForHash = foundApp.login + foundApp.password + appAuthRequestDto.deviceId + timestamp;//add device id to hash
+        String dataForHash = foundApp.login + foundApp.password + appAuthRequestDto.deviceId + timestamp;
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 
@@ -54,7 +54,11 @@ public class AppsService {
 
         AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp, appAuthRequestDto.deviceId);
 
-        appsApiKeysRepository.saveAndFlush(appApiKey);
+        try {
+            appsApiKeysRepository.saveAndFlush(appApiKey);
+        } catch (Exception e) {
+            throw CustomException.FatalException("db connection error");
+        }
 
         return new AppAuthResponseDto(apiKey);
     }

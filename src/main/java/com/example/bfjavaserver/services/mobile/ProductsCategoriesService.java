@@ -1,5 +1,6 @@
 package com.example.bfjavaserver.services.mobile;
 
+import com.example.bfjavaserver.controllers.shared.CustomException;
 import com.example.bfjavaserver.dtos.mobile.ProductsCategoriesResponseDto;
 import com.example.bfjavaserver.models.ProductCategory;
 import com.example.bfjavaserver.repositories.ProductsCategoriesRepository;
@@ -19,9 +20,12 @@ public class ProductsCategoriesService {
     @Autowired
     private final ProductsCategoriesRepository productsCategoriesRepository;
 
-    public ProductsCategoriesResponseDto getAll() {
-        ArrayList<ProductCategory> productCategories = (ArrayList<ProductCategory>) productsCategoriesRepository.findAll();
-
-        return new ProductsCategoriesResponseDto(productCategories);
+    public ProductsCategoriesResponseDto getAll() throws Exception {
+        try {
+            ArrayList<ProductCategory> productCategories = (ArrayList<ProductCategory>) productsCategoriesRepository.findAll();
+            return new ProductsCategoriesResponseDto(productCategories);
+        } catch (Exception e) {
+            throw CustomException.FatalException("db connection error");
+        }
     }
 }
