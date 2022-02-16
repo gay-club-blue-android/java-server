@@ -17,7 +17,7 @@ public class ProductsCategoriesController {
     private final ProductsCategoriesService productsCategoriesService;
 
     @GetMapping(value = "/getAll")
-    public ProductsCategoriesResponseDto getAll() throws Exception {
+    public ProductsCategoriesResponseDto getAll(){
         return productsCategoriesService.getAll();
     }
 }

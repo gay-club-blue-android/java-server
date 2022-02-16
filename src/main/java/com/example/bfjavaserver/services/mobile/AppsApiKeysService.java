@@ -13,11 +13,7 @@ public class AppsApiKeysService {
     @Autowired
     private final AppsApiKeysRepository appsApiKeysRepository;
 
-    public AppApiKey getByKeyAndDeviceId(String key, String deviceId) throws Exception {
-        try {
-            return appsApiKeysRepository.getByKeyAndDeviceId(key, deviceId);
-        } catch (Exception e) {
-            throw CustomException.FatalException("db connection error");
-        }
+    public AppApiKey getByKeyAndDeviceId(String key, String deviceId) {
+        return appsApiKeysRepository.getByKeyAndDeviceId(key, deviceId);
     }
 }

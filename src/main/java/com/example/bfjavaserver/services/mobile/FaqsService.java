@@ -16,12 +16,8 @@ public class FaqsService {
     @Autowired
     private final FaqsRepository faqsRepository;
 
-    public FaqResponseDto getAll() throws Exception {
-        try {
-            ArrayList<Faq> faqs = (ArrayList<Faq>) faqsRepository.findAll();
-            return new FaqResponseDto(faqs);
-        } catch (Exception e) {
-            throw CustomException.FatalException("db connection error");
-        }
+    public FaqResponseDto getAll() {
+        ArrayList<Faq> faqs = (ArrayList<Faq>) faqsRepository.findAll();
+        return new FaqResponseDto(faqs);
     }
 }

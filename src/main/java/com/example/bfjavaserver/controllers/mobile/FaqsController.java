@@ -20,7 +20,7 @@ public class FaqsController {
     private final FaqsService faqsService;
 
     @GetMapping(value = "/getAll")
-    public FaqResponseDto getAll() throws Exception {
+    public FaqResponseDto getAll(){
         return faqsService.getAll();
     }
 }
