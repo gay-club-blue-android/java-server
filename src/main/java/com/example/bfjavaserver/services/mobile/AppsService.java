@@ -32,13 +32,7 @@ public class AppsService {
 
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
-        App foundApp = null;
-
-        try {
-            foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
-        } catch (Exception e) {
-            throw CustomException.FatalException("db connection error");
-        }
+        App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
 
         if (foundApp == null) {
             throw CustomException.AuthException("App credentials not found");
@@ -54,11 +48,7 @@ public class AppsService {
 
         AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp, appAuthRequestDto.deviceId);
 
-        try {
-            appsApiKeysRepository.saveAndFlush(appApiKey);
-        } catch (Exception e) {
-            throw CustomException.FatalException("db connection error");
-        }
+        appsApiKeysRepository.saveAndFlush(appApiKey);
 
         return new AppAuthResponseDto(apiKey);
     }

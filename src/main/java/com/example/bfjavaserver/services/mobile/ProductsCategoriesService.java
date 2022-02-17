@@ -20,12 +20,8 @@ public class ProductsCategoriesService {
     @Autowired
     private final ProductsCategoriesRepository productsCategoriesRepository;
 
-    public ProductsCategoriesResponseDto getAll() throws Exception {
-        try {
-            ArrayList<ProductCategory> productCategories = (ArrayList<ProductCategory>) productsCategoriesRepository.findAll();
-            return new ProductsCategoriesResponseDto(productCategories);
-        } catch (Exception e) {
-            throw CustomException.FatalException("db connection error");
-        }
+    public ProductsCategoriesResponseDto getAll() {
+        ArrayList<ProductCategory> productCategories = (ArrayList<ProductCategory>) productsCategoriesRepository.findAll();
+        return new ProductsCategoriesResponseDto(productCategories);
     }
 }
