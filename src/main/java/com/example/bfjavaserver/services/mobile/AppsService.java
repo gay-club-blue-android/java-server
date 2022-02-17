@@ -32,9 +32,7 @@ public class AppsService {
 
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
-        App foundApp = null;
-
-        foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
+        App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
 
         if (foundApp == null) {
             throw CustomException.AuthException("App credentials not found");

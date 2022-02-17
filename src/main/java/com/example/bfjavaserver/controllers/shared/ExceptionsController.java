@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class ExceptionsController {
 
-
     @ExceptionHandler(CustomException.class)
     public ResponseEntity<ExceptionResponseDto> handleException(CustomException e) {
         ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.toString());
@@ -24,6 +23,7 @@ public class ExceptionsController {
                 "DataAccessResourceFailureException:db connection error");
         return new ResponseEntity<>(exceptionResponseDto, HttpStatus.SERVICE_UNAVAILABLE);
     }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponseDto> handleException(Exception e) {
         ExceptionResponseDto exceptionResponseDto = new ExceptionResponseDto(e.toString());
