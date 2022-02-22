@@ -1,4 +1,4 @@
-package com.example.bfjavaserver.dtos.mobile;
+package com.example.bfjavaserver.dtos.mobile.requests;
 
 import lombok.Data;
 

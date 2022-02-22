@@ -1,11 +1,6 @@
 package com.example.bfjavaserver.controllers.mobile;
 
-import com.example.bfjavaserver.controllers.shared.CustomException;
-import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
-import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
-import com.example.bfjavaserver.dtos.mobile.FaqResponseDto;
-import com.example.bfjavaserver.dtos.mobile.ProductsCategoriesResponseDto;
-import com.example.bfjavaserver.services.mobile.AppsApiKeysService;
+import com.example.bfjavaserver.dtos.mobile.responses.FaqResponseDto;
 import com.example.bfjavaserver.services.mobile.FaqsService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

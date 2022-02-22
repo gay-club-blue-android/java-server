@@ -1,7 +1,7 @@
 package com.example.bfjavaserver.controllers.mobile;
 
-import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
-import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
+import com.example.bfjavaserver.dtos.mobile.requests.AppAuthRequestDto;
+import com.example.bfjavaserver.dtos.mobile.responses.AppAuthResponseDto;
 import com.example.bfjavaserver.services.mobile.AppsService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

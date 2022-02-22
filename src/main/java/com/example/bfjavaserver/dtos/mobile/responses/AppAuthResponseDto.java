@@ -1,4 +1,4 @@
-package com.example.bfjavaserver.dtos.mobile;
+package com.example.bfjavaserver.dtos.mobile.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

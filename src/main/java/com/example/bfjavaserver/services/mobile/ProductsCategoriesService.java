@@ -1,7 +1,6 @@
 package com.example.bfjavaserver.services.mobile;
 
-import com.example.bfjavaserver.controllers.shared.CustomException;
-import com.example.bfjavaserver.dtos.mobile.ProductsCategoriesResponseDto;
+import com.example.bfjavaserver.dtos.mobile.responses.ProductsCategoriesResponseDto;
 import com.example.bfjavaserver.models.ProductCategory;
 import com.example.bfjavaserver.repositories.ProductsCategoriesRepository;
 import lombok.AllArgsConstructor;

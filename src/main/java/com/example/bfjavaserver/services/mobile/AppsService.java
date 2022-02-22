@@ -1,8 +1,8 @@
 package com.example.bfjavaserver.services.mobile;
 
 import com.example.bfjavaserver.controllers.shared.CustomException;
-import com.example.bfjavaserver.dtos.mobile.AppAuthRequestDto;
-import com.example.bfjavaserver.dtos.mobile.AppAuthResponseDto;
+import com.example.bfjavaserver.dtos.mobile.requests.AppAuthRequestDto;
+import com.example.bfjavaserver.dtos.mobile.responses.AppAuthResponseDto;
 import com.example.bfjavaserver.models.App;
 import com.example.bfjavaserver.models.AppApiKey;
 import com.example.bfjavaserver.repositories.AppsApiKeysRepository;
