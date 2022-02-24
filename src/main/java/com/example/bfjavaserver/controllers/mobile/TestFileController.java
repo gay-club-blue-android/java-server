@@ -1,11 +1,13 @@
 package com.example.bfjavaserver.controllers.mobile;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 
 import org.apache.commons.io.IOUtils;
 
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.InputStream;
 
@@ -21,10 +23,17 @@ public class TestFileController {
         fileWriter.close();
     }
 
-    @GetMapping(value = "/getFile")
+    @GetMapping(value = "/getTxtFile")
     public @ResponseBody
-    byte[] getImage() throws Exception {
-        InputStream inputStream = getClass().getResourceAsStream("test.txt");
+    byte[] getTxtFile() throws Exception {
+        FileInputStream inputStream = new FileInputStream("test.txt");
+        return IOUtils.toByteArray(inputStream);
+    }
+
+    @GetMapping(value = "/getPictureFile", produces = MediaType.IMAGE_JPEG_VALUE)
+    public @ResponseBody
+    byte[] getPictureFile() throws Exception {
+        FileInputStream inputStream = new FileInputStream("picture.jpg");
         return IOUtils.toByteArray(inputStream);
     }
 }
