@@ -17,6 +17,6 @@ public class ProductCategory {
     @Column
     public String name;
 
-    @Column(name = "photo_path")
-    public String photoPath;
+    @Column(name = "picture_name")
+    public String pictureName;
 }
