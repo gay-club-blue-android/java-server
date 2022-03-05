@@ -18,4 +18,9 @@ public class ProductsService {
         ArrayList<Product> products = (ArrayList<Product>) productsRepository.findAll();
         return new ProductsResponseDto(products);
     }
+
+    public ProductsResponseDto getAllByCategoryId(int id) {
+        ArrayList<Product> products = productsRepository.findAllByProductCategoryId(id);
+        return new ProductsResponseDto(products);
+    }
 }
