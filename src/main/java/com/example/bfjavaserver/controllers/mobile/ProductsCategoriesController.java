@@ -26,7 +26,7 @@ public class ProductsCategoriesController {
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
-        FileInputStream inputStream = new FileInputStream("images/" + pictureName);
+        FileInputStream inputStream = new FileInputStream("images/productscategories/" + pictureName);
         return IOUtils.toByteArray(inputStream);
     }
 }
