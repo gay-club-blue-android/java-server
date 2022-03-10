@@ -9,6 +9,6 @@ import java.util.ArrayList;
 @Data
 @AllArgsConstructor
 public class ProductsResponseDto {
-    public ArrayList<Product> products;
+    public ArrayList<ProductResponseDto> products;
 }
 

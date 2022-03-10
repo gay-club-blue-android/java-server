@@ -16,15 +16,16 @@ import java.io.FileInputStream;
 public class ProductsController {
     @Autowired
     private ProductsService productsService;
+
     @GetMapping(value = "/getAll")
     public ProductsResponseDto getAll(){
         return productsService.getAll();
     }
+
     @GetMapping(value = "/getAllByCategoryId/{id}")
     public ProductsResponseDto getAll(@PathVariable int id){
         return productsService.getAllByCategoryId(id);
     }
-
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
