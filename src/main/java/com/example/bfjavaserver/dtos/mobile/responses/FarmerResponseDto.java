@@ -11,7 +11,6 @@ public class FarmerResponseDto {
 	public String firstName;
 	public String lastName;
 	public String email;
-	public String password;
 	public String phoneNumber;
 	public String photoPath;
 	public String description;

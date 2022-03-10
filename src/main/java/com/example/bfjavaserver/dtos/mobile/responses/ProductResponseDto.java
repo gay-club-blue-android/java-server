@@ -15,5 +15,5 @@ public class ProductResponseDto {
 	public double rating;
 	public String photoPath;
 	public FarmerResponseDto farmer;
-	public ProductCategory productCategory;
+	public int productCategoryId;
 }
