@@ -5,6 +5,6 @@ import lombok.AllArgsConstructor;
 import java.util.ArrayList;
 @AllArgsConstructor
 public class FarmersResponseDto {
-    public ArrayList<FarmerResponseDto> products;
+    public ArrayList<FarmerResponseDto> farmers;
 }
 
