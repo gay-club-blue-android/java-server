@@ -14,9 +14,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class FarmersService {
-    @Autowired
     private final ModelMapper modelMapper;
-    @Autowired
     private final FarmersRepository farmersRepository;
 
     public FarmersResponseDto getAll() {

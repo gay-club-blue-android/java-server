@@ -20,16 +20,9 @@ import static java.lang.System.currentTimeMillis;
 @Service
 @AllArgsConstructor
 public class AppsService {
-
-    @Autowired
-    private final ModelMapper modelMapper;
-
-    @Autowired
     private final AppsRepository appsRepository;
-
-    @Autowired
     private final AppsApiKeysRepository appsApiKeysRepository;
-
+    
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
         App foundApp = appsRepository.findByLoginAndPassword(appAuthRequestDto.login, appAuthRequestDto.password);
@@ -44,7 +37,10 @@ public class AppsService {
 
         String apiKey = Hashing.sha256().hashString(dataForHash, StandardCharsets.UTF_8).toString();
 
-        long finishTime = timestamp + 86400 * 1000;
+        int millisecondsInDay = 86400 * 1000;
+        int days = 7;
+
+        long finishTime = timestamp + days * millisecondsInDay;
 
         AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp, appAuthRequestDto.deviceId);
 

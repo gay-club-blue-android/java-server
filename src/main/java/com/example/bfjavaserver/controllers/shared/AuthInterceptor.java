@@ -13,8 +13,6 @@ import static java.lang.System.currentTimeMillis;
 
 @AllArgsConstructor
 public class AuthInterceptor implements HandlerInterceptor {
-
-    @Autowired
     private final AppsApiKeysService appsApiKeysService;
 
     @Override

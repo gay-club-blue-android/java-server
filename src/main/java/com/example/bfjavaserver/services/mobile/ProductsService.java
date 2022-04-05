@@ -14,10 +14,9 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class ProductsService {
-    @Autowired
     private final ModelMapper modelMapper;
-    @Autowired
     private final ProductsRepository productsRepository;
+
     public ProductsResponseDto getAll() {
         ArrayList<ProductResponseDto> products = (ArrayList<ProductResponseDto>) productsRepository
                 .findAll().stream().map(

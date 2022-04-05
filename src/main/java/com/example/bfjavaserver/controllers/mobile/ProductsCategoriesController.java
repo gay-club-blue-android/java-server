@@ -14,8 +14,6 @@ import java.io.FileInputStream;
 @RequestMapping(path = "/mobile/productsCategories", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @AllArgsConstructor
 public class ProductsCategoriesController {
-
-    @Autowired
     private final ProductsCategoriesService productsCategoriesService;
 
     @GetMapping(value = "/getAll")

@@ -12,7 +12,6 @@ import java.util.ArrayList;
 @Service
 @AllArgsConstructor
 public class FaqsService {
-    @Autowired
     private final FaqsRepository faqsRepository;
 
     public FaqResponseDto getAll() {

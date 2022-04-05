@@ -13,12 +13,15 @@ import javax.validation.Valid;
 @RequestMapping(path = "/mobile/apps", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @AllArgsConstructor
 public class AppsController {
-
-    @Autowired
     private final AppsService appsService;
 
     @PostMapping(value = "/authByLoginAndPassword")
     public AppAuthResponseDto authByLoginAndPassword(@RequestBody @Valid AppAuthRequestDto appAuthRequestDto) throws Exception {
         return appsService.authByLoginAndPassword(appAuthRequestDto);
+    }
+
+    @GetMapping(value = "/checkAuth")
+    public String checkAuth(){
+        return "ok";
     }
 }

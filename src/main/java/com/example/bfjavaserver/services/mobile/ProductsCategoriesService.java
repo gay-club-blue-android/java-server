@@ -13,10 +13,6 @@ import java.util.ArrayList;
 @Service
 @AllArgsConstructor
 public class ProductsCategoriesService {
-    @Autowired
-    private final ModelMapper modelMapper;
-
-    @Autowired
     private final ProductsCategoriesRepository productsCategoriesRepository;
 
     public ProductsCategoriesResponseDto getAll() {
