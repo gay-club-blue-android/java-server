@@ -33,11 +33,11 @@ public class AuthInterceptor implements HandlerInterceptor {
             throw CustomException.LogicException("app key not found");
         }
 
-        long timestamp = currentTimeMillis();
+        /*long timestamp = currentTimeMillis();
 
         if (timestamp > appApiKey.finishTime) {
             throw CustomException.LogicException("app key expired");
-        }
+        }*/
 
         return true;
     }

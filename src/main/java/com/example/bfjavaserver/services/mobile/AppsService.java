@@ -31,6 +31,9 @@ public class AppsService {
             throw CustomException.AuthException("App credentials not found");
         }
 
+        //delete all old keys for this device
+        appsApiKeysRepository.deleteByDeviceId(appAuthRequestDto.deviceId);
+
         long timestamp = currentTimeMillis();
 
         String dataForHash = foundApp.login + foundApp.password + appAuthRequestDto.deviceId + timestamp;

@@ -19,9 +19,4 @@ public class AppsController {
     public AppAuthResponseDto authByLoginAndPassword(@RequestBody @Valid AppAuthRequestDto appAuthRequestDto) throws Exception {
         return appsService.authByLoginAndPassword(appAuthRequestDto);
     }
-
-    @GetMapping(value = "/checkAuth")
-    public String checkAuth(){
-        return "ok";
-    }
 }
