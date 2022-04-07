@@ -45,7 +45,7 @@ public class AppsService {
 
         long finishTime = timestamp + days * millisecondsInDay;
 
-        AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp, appAuthRequestDto.deviceId);
+        AppApiKey appApiKey = new AppApiKey(0, apiKey, finishTime, foundApp.id, appAuthRequestDto.deviceId);
 
         appsApiKeysRepository.saveAndFlush(appApiKey);
 

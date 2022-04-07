@@ -24,9 +24,8 @@ public class AppApiKey {
     @Column(name = "finish_time")
     public long finishTime;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name="app_id")
-    public App app;
+    @Column(name="app_id")
+    public int appId;
 
     @Column(name = "device_id")
     public String deviceId;
