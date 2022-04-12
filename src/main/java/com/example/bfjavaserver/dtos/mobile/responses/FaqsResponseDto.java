@@ -9,6 +9,6 @@ import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
-public class FaqResponseDto {
+public class FaqsResponseDto {
     ArrayList<Faq> faqs;
 }

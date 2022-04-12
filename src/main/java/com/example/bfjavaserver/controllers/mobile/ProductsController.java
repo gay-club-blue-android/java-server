@@ -25,6 +25,7 @@ public class ProductsController {
     public ProductsResponseDto getAll(@PathVariable int id){
         return productsService.getAllByCategoryId(id);
     }
+
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
