@@ -15,6 +15,9 @@ import static java.lang.System.currentTimeMillis;
 public class AuthInterceptor implements HandlerInterceptor {
     private final AppsApiKeysService appsApiKeysService;
 
+    /**
+     * проверяет валидность пары apikey и deviceid при каждом запросе
+     */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 

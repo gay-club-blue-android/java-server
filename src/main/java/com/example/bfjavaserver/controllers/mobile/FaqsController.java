@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.*;
 public class FaqsController {
     private final FaqsService faqsService;
 
+    /**
+     * возвращает все хранящиеся все вопросы и ответы на них
+     * @return сущность, содержащая список всех сущностей FAQ
+     */
     @GetMapping(value = "/getAll")
     public FaqsResponseDto getAll(){
         return faqsService.getAll();

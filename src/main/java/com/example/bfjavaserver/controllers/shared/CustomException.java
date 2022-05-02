@@ -2,6 +2,9 @@ package com.example.bfjavaserver.controllers.shared;
 
 import org.springframework.http.HttpStatus;
 
+/**
+ * сущность, позволяющая создавать ошибки для отправки клиенту
+ */
 public class CustomException extends Exception {
     private HttpStatus httpStatus;
     private String exceptionName;

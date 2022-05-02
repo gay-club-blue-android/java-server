@@ -16,11 +16,20 @@ import java.io.FileInputStream;
 public class ProductsCategoriesController {
     private final ProductsCategoriesService productsCategoriesService;
 
+    /**
+     * возвращает все категории из базы данных
+     * @return сущность, содержащая список сущностей категории продукта
+     */
     @GetMapping(value = "/getAll")
     public ProductsCategoriesResponseDto getAll() {
         return productsCategoriesService.getAll();
     }
-
+    /**
+     * выдаёт изображение из папки images/productscategories
+     * @param pictureName название файла картинки
+     * @return картинку в виде массива байт
+     * @throws Exception возвращает ошибку, если иззображения не существуе
+     */
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable String pictureName) throws Exception {

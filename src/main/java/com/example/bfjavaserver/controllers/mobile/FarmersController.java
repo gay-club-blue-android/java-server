@@ -16,11 +16,21 @@ import java.io.FileInputStream;
 public class FarmersController {
     private FarmersService farmersService;
 
+    /**
+     * возвращает всех фермеров из базы данных
+     * @return сущность, содержащая список сущностей фермера
+     */
     @GetMapping(value = "/getAll")
     public FarmersResponseDto getAll(){
         return farmersService.getAll();
     }
 
+    /**
+     * выдаёт изображение из папки images/farmers
+     * @param pictureName название файла картинки
+     * @return картинку в виде массива байт
+     * @throws Exception возвращает ошибку, если иззображения не существует
+     */
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
