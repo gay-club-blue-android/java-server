@@ -1,4 +1,4 @@
-package com.example.bfjavaserver;
+package com.example.bfjavaserver.config;
 
 import com.example.bfjavaserver.controllers.shared.AuthInterceptor;
 import com.example.bfjavaserver.services.mobile.AppsApiKeysService;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @AllArgsConstructor
-public class ConfigApplication implements WebMvcConfigurer {
+public class ApplicationConfig implements WebMvcConfigurer {
 
     @Autowired
     private final AppsApiKeysService appsApiKeysService;
