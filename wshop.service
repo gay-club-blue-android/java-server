@@ -1,0 +1,8 @@
+[Unit]
+Description=wshop
+
+[Service]
+ExecStart=/root/runwshop.sh
+
+[Install]
+WantedBy=multi-user.target
