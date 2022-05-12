@@ -1,0 +1,10 @@
+com.example.bfjavaserver
+com.example.bfjavaserver.config
+com.example.bfjavaserver.controllers.mobile
+com.example.bfjavaserver.controllers.shared
+com.example.bfjavaserver.dtos.mobile.requests
+com.example.bfjavaserver.dtos.mobile.responses
+com.example.bfjavaserver.dtos.shared
+com.example.bfjavaserver.models
+com.example.bfjavaserver.repositories
+com.example.bfjavaserver.services.mobile
