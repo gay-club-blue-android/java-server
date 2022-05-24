@@ -18,12 +18,23 @@ import java.nio.charset.StandardCharsets;
 
 import static java.lang.System.currentTimeMillis;
 
+/**
+ * Обеспечивает "умный" доступ к таблице {@link App}
+ */
 @Service
 @AllArgsConstructor
 public class AppsService {
     private final AppsRepository appsRepository;
     private final AppsApiKeysRepository appsApiKeysRepository;
 
+    /**
+     * Совершает попытку на авторизацию приложения (не пользователя).
+     * Если приложение с таким логином и паролем есть в базе данных, то удаляет все api-ключи,
+     * связанные с этим id устройтсва, создаёт новый и возвращает сущность, содержащую его значение, иначе возвращает ошибку
+     * @param appAuthRequestDto сущность, содержашая email, пароль и id устройтсва авторизируемого приложения
+     * @return Сущность содержащую значение нового api-ключа
+     * @throws Exception Приложение не было найдено
+     */
     @Transactional
     public AppAuthResponseDto authByLoginAndPassword(AppAuthRequestDto appAuthRequestDto) throws Exception {
 
