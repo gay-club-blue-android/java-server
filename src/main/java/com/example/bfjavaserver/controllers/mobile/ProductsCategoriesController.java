@@ -2,6 +2,9 @@ package com.example.bfjavaserver.controllers.mobile;
 
 import com.example.bfjavaserver.dtos.mobile.responses.ProductsCategoriesResponseDto;
 import com.example.bfjavaserver.services.mobile.ProductsCategoriesService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import java.io.FileInputStream;
 @RestController
 @RequestMapping(path = "/mobile/productsCategories", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @AllArgsConstructor
+@Tag(name="Контроллер категорий продуктов", description = "позволяет получить список категорий продуктов, картинку категории")
 public class ProductsCategoriesController {
     private final ProductsCategoriesService productsCategoriesService;
 
@@ -20,6 +24,7 @@ public class ProductsCategoriesController {
      * возвращает все категории из базы данных
      * @return сущность, содержащая список сущностей категории продукта
      */
+    @Operation(summary = "Выдача списка категорий продуктов", description = "возвращает все категории из базы данных")
     @GetMapping(value = "/getAll")
     public ProductsCategoriesResponseDto getAll() {
         return productsCategoriesService.getAll();
@@ -30,9 +35,10 @@ public class ProductsCategoriesController {
      * @return картинку в виде массива байт
      * @throws Exception возвращает ошибку, если иззображения не существуе
      */
+    @Operation(summary = "Выдача картинки категории", description = "выдаёт изображение из папки images/productscategories")
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
-    byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
+    byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
         FileInputStream inputStream = new FileInputStream("images/productscategories/" + pictureName);
         return IOUtils.toByteArray(inputStream);
     }

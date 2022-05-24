@@ -2,6 +2,9 @@ package com.example.bfjavaserver.controllers.mobile;
 
 import com.example.bfjavaserver.dtos.mobile.responses.ProductsResponseDto;
 import com.example.bfjavaserver.services.mobile.ProductsService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +16,14 @@ import java.io.FileInputStream;
 @RestController
 @RequestMapping(path = "/mobile/products", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @AllArgsConstructor
+@Tag(name="Контроллер продуктов", description = "позволяет получить список продуктов, фото продукта")
 public class ProductsController {
     private ProductsService productsService;
     /**
      * возвращает все продукты из базы данных
      * @return сущность, содержащая список сущностей продуктов
      */
+    @Operation(summary = "Выдача всех продуктов", description = "возвращает все продукты из базы данных")
     @GetMapping(value = "/getAllByCategoryId/{id}")
     public ProductsResponseDto getAll(@PathVariable int id){
         return productsService.getAllByCategoryId(id);
@@ -29,9 +34,10 @@ public class ProductsController {
      * @return картинку в виде массива байт
      * @throws Exception возвращает ошибку, если иззображения не существуе
      */
+    @Operation(summary = "Выдача картинки продукта", description = "выдаёт изображение из папки images/products")
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
-    byte[] getPictureByName(@PathVariable String pictureName) throws Exception {
+    byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
         FileInputStream inputStream = new FileInputStream("images/products/" + pictureName);
         return IOUtils.toByteArray(inputStream);
     }
