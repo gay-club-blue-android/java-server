@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping(path = "/mobile/apps", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping(path = "/mobile/apps")
 @AllArgsConstructor
 @Tag(name = "Контроллер приложений", description = "проводит авторизацию приложений (не пользователей)")
 public class AppsController {

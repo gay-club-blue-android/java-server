@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileInputStream;
 
 @RestController
-@RequestMapping(path = "/mobile/productsCategories", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping(path = "/mobile/productsCategories")
 @AllArgsConstructor
 @Tag(name="Контроллер категорий продуктов", description = "позволяет получить список категорий продуктов, картинку категории")
 public class ProductsCategoriesController {

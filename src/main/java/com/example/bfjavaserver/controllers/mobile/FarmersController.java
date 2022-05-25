@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileInputStream;
 
 @RestController
-@RequestMapping(path = "/mobile/farmers", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping(path = "/mobile/farmers")
 @AllArgsConstructor
 @Tag(name="Контроллер фермеров", description = "позволяет получить список фермеров, аватар фермера")
 public class FarmersController {

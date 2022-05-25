@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/mobile/faqs", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@RequestMapping(path = "/mobile/faqs")
 @AllArgsConstructor
 @Tag(name="Контроллер ЧЗВ", description = "выдаёт список всех ЧЗВ")
 public class FaqsController {
