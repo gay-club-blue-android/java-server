@@ -2,20 +2,14 @@ package com.example.bfjavaserver.controllers.shared;
 
 import com.example.bfjavaserver.models.AppApiKey;
 import com.example.bfjavaserver.services.mobile.AppsApiKeysService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import java.io.File;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static java.lang.System.currentTimeMillis;
 
 @AllArgsConstructor
 public class AuthInterceptor implements HandlerInterceptor {
