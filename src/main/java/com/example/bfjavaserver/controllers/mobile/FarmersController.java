@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileInputStream;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path = "/mobile/farmers")
 @AllArgsConstructor
 @Tag(name="Контроллер фермеров", description = "позволяет получить список фермеров, аватар фермера")

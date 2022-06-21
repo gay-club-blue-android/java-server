@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileInputStream;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path = "/mobile/productsCategories")
 @AllArgsConstructor
 @Tag(name="Контроллер категорий продуктов", description = "позволяет получить список категорий продуктов, картинку категории")
