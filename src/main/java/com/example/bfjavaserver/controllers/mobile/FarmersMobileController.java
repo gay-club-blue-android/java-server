@@ -1,7 +1,7 @@
 package com.example.bfjavaserver.controllers.mobile;
 
 import com.example.bfjavaserver.dtos.mobile.responses.FarmersResponseDto;
-import com.example.bfjavaserver.services.mobile.FarmersService;
+import com.example.bfjavaserver.services.mobile.FarmersMobileService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,8 +17,8 @@ import java.io.FileInputStream;
 @RequestMapping(path = "/mobile/farmers")
 @AllArgsConstructor
 @Tag(name="Контроллер фермеров", description = "позволяет получить список фермеров, аватар фермера")
-public class FarmersController {
-    private FarmersService farmersService;
+public class FarmersMobileController {
+    private FarmersMobileService farmersMobileService;
 
     /**
      * возвращает всех фермеров из базы данных
@@ -27,7 +27,7 @@ public class FarmersController {
     @Operation(summary = "выдача списка фермеров", description = "возвращает всех фермеров из базы данных")
     @GetMapping(value = "/getAll")
     public FarmersResponseDto getAll(){
-        return farmersService.getAll();
+        return farmersMobileService.getAll();
     }
 
     /**
