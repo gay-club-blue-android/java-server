@@ -9,4 +9,5 @@ public class FarmerAuthResponseDto {
     public String lastName;
     public String email;
     public String description;
+    public String photoPath;
 }

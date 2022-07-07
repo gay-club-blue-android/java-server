@@ -2,6 +2,7 @@ package com.example.bfjavaserver.dtos.mobile.requests;
 
 import lombok.Data;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 @Data

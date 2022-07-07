@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import java.io.FileInputStream;
 
 @RestController
-@CrossOrigin
 @RequestMapping(path = "/mobile/productsCategories")
 @AllArgsConstructor
 @Tag(name="Контроллер категорий продуктов", description = "позволяет получить список категорий продуктов, картинку категории")
@@ -37,7 +36,6 @@ public class ProductsCategoriesController {
      */
     @Operation(summary = "Выдача картинки категории", description = "выдаёт изображение из папки images/productscategories")
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public @ResponseBody
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
         FileInputStream inputStream = new FileInputStream("images/productscategories/" + pictureName);
         return IOUtils.toByteArray(inputStream);
