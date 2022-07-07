@@ -34,6 +34,9 @@ public class CustomException extends Exception {
     public static CustomException LogicException(String message) {
         return new CustomException("LogicException", message, HttpStatus.FORBIDDEN);
     }
+    public static CustomException BadDataException(String message){
+        return new CustomException("BadDataException", message, HttpStatus.UNSUPPORTED_MEDIA_TYPE);
+    }
 
     @Override
     public String toString() {
