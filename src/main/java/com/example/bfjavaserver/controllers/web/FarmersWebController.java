@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import java.io.FileInputStream;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:8080", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping(path = "/web/farmers")
 @AllArgsConstructor
 public class FarmersWebController {
