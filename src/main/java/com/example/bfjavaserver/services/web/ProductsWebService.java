@@ -22,10 +22,13 @@ public class ProductsWebService {
         Product inputProduct = modelMapper.map(productRequestDto, Product.class);
 
         inputProduct.productCategory = productsCategoriesRepository.getById(inputProduct.productCategory.id);
+
         inputProduct.priceMeasurement = priceMeasurementsRepository.getById(inputProduct.priceMeasurement.id);
+
         inputProduct.amountMeasurement = amountMeasurementsRepository.getById(inputProduct.amountMeasurement.id);
 
         inputProduct.farmer = farmersRepository.getById(inputProduct.farmer.id);
+
         Product newProduct = productsRepository.saveAndFlush(inputProduct);
 
         ProductWebResponseDto outputProduct = modelMapper.map(newProduct, ProductWebResponseDto.class);
