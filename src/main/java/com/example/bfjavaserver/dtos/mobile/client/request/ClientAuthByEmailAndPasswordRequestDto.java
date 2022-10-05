@@ -1,11 +1,11 @@
-package com.example.bfjavaserver.dtos.mobile.requests;
+package com.example.bfjavaserver.dtos.mobile.client.request;
 
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 
 @Data
-public class ClientRequestDto {
+public class ClientAuthByEmailAndPasswordRequestDto {
     @NotEmpty
     public String email;
 

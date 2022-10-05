@@ -17,7 +17,6 @@ public class ApplicationConfig implements WebMvcConfigurer {
     /**
      * Сервис для продвинутого доступа к таблице API-ключей
      */
-    @Autowired
     private final AppsApiKeysService appsApiKeysService;
 
     /**

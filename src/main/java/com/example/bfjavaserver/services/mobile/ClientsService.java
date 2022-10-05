@@ -1,10 +1,8 @@
 package com.example.bfjavaserver.services.mobile;
 
 import com.example.bfjavaserver.controllers.shared.CustomException;
-import com.example.bfjavaserver.dtos.mobile.requests.ClientRequestDto;
-import com.example.bfjavaserver.dtos.mobile.responses.ClientResponseDto;
-import com.example.bfjavaserver.models.App;
-import com.example.bfjavaserver.models.AppApiKey;
+import com.example.bfjavaserver.dtos.mobile.client.request.ClientAuthByEmailAndPasswordRequestDto;
+import com.example.bfjavaserver.dtos.mobile.client.response.ClientAuthByEmailAndPasswordResponseDto;
 import com.example.bfjavaserver.models.Client;
 import com.example.bfjavaserver.repositories.ClientsRepository;
 import lombok.AllArgsConstructor;
@@ -22,20 +20,20 @@ public class ClientsService {
     /**
      * Осуществляет попытку авторизации клиента (покупателя)
      * Если клиент с переданными email и паролем существует, то возвращает информацию о нём, иначе возвращает ошибку
-     * @param clientRequestDto Сущность, содержашая email и пароль искомого клиента
+     * @param clientAuthByEmailAndPasswordRequestDto Сущность, содержашая email и пароль искомого клиента
      * @return Сущность, содержащая id (из базы данных), имя, фамилию и email клиента
      * @throws Exception Если клиент не был найден
      */
-    public ClientResponseDto authByEmailAndPassword(ClientRequestDto clientRequestDto) throws Exception{
+    public ClientAuthByEmailAndPasswordResponseDto authByEmailAndPassword(ClientAuthByEmailAndPasswordRequestDto clientAuthByEmailAndPasswordRequestDto) throws Exception{
 
-        Client foundClient = clientsRepository.findByEmailAndPassword(clientRequestDto.email, clientRequestDto.password);
+        Client foundClient = clientsRepository.findByEmailAndPassword(clientAuthByEmailAndPasswordRequestDto.email, clientAuthByEmailAndPasswordRequestDto.password);
 
         if (foundClient == null) {
             throw CustomException.AuthException("Client credentials not found");
         }
 
-        ClientResponseDto clientResponseDto = modelMapper.map(foundClient, ClientResponseDto.class);
+        ClientAuthByEmailAndPasswordResponseDto clientAuthByEmailAndPasswordResponseDto = modelMapper.map(foundClient, ClientAuthByEmailAndPasswordResponseDto.class);
 
-        return clientResponseDto;
+        return clientAuthByEmailAndPasswordResponseDto;
     }
 }

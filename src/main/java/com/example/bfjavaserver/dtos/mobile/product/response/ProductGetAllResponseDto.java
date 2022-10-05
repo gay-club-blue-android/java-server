@@ -1,10 +1,10 @@
-package com.example.bfjavaserver.dtos.mobile.responses;
+package com.example.bfjavaserver.dtos.mobile.product.response;
 
-import com.example.bfjavaserver.models.ProductCategory;
+import com.example.bfjavaserver.dtos.mobile.farmer.response.FarmerGetAllResponseDto;
 import lombok.Data;
 
 @Data
-public class ProductResponseDto {
+public class ProductGetAllResponseDto {
 	public int id;
 	public String name;
 	public int price;
@@ -14,6 +14,6 @@ public class ProductResponseDto {
 	public String description;
 	public double rating;
 	public String photoPath;
-	public FarmerResponseDto farmer;
+	public FarmerGetAllResponseDto farmer;
 	public int productCategoryId;
 }

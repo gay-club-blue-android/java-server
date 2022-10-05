@@ -27,7 +27,9 @@ public class AuthInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        String uri = request.getRequestURI();
+        return true;
+
+        /*String uri = request.getRequestURI();
 
         Path path = Paths.get(uri);
         boolean isSwaggerFile = (path.startsWith("/swagger-ui") &&
@@ -51,6 +53,6 @@ public class AuthInterceptor implements HandlerInterceptor {
             throw CustomException.LogicException("app key expired");
         }*/
 
-        return true;
+        //return true;
     }
 }

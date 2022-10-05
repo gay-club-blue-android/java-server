@@ -1,17 +1,17 @@
 package com.example.bfjavaserver.controllers.mobile;
 
-import com.example.bfjavaserver.dtos.mobile.responses.ProductsResponseDto;
+import com.example.bfjavaserver.dtos.mobile.product.response.ProductGetAllResponseDto;
 import com.example.bfjavaserver.services.mobile.ProductsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.apache.commons.io.IOUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileInputStream;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/mobile/products")
@@ -25,7 +25,7 @@ public class ProductsController {
      */
     @Operation(summary = "Выдача всех продуктов", description = "возвращает все продукты из базы данных")
     @GetMapping(value = "/getAllByCategoryId/{id}")
-    public ProductsResponseDto getAll(@PathVariable int id){
+    public List<ProductGetAllResponseDto> getAll(@PathVariable int id){
         return productsService.getAllByCategoryId(id);
     }
     /**

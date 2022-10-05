@@ -1,17 +1,17 @@
 package com.example.bfjavaserver.controllers.mobile;
 
-import com.example.bfjavaserver.dtos.mobile.responses.FarmersResponseDto;
+import com.example.bfjavaserver.dtos.mobile.farmer.response.FarmerGetAllResponseDto;
 import com.example.bfjavaserver.services.mobile.FarmersService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.apache.commons.io.IOUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileInputStream;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/mobile/farmers")
@@ -26,7 +26,7 @@ public class FarmersController {
      */
     @Operation(summary = "выдача списка фермеров", description = "возвращает всех фермеров из базы данных")
     @GetMapping(value = "/getAll")
-    public FarmersResponseDto getAll(){
+    public List<FarmerGetAllResponseDto> getAll(){
         return farmersService.getAll();
     }
 

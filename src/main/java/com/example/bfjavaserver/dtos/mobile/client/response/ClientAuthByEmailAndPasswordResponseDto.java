@@ -1,9 +1,9 @@
-package com.example.bfjavaserver.dtos.mobile.responses;
+package com.example.bfjavaserver.dtos.mobile.client.response;
 
 import lombok.Data;
 
 @Data
-public class ClientResponseDto {
+public class ClientAuthByEmailAndPasswordResponseDto {
     public int id;
     public String firstName;
     public String lastName;

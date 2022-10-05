@@ -1,4 +1,4 @@
-package com.example.bfjavaserver.dtos.mobile.responses;
+package com.example.bfjavaserver.dtos.mobile.farmer.response;
 
 import com.example.bfjavaserver.models.FarmerDeliveryType;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 import lombok.Data;
 
 @Data
-public class FarmerResponseDto {
+public class FarmerGetAllResponseDto {
 	public int id;
 	public String firstName;
 	public String lastName;
