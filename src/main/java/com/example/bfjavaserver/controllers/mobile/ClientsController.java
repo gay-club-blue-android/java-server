@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin
 @RequestMapping(path = "/mobile/clients")
 @AllArgsConstructor
 @Tag(name="Контроллер клиентов", description = "проводит авторизацию клиентов")

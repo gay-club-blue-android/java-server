@@ -14,7 +14,6 @@ import java.io.FileInputStream;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping(path = "/mobile/products")
 @AllArgsConstructor
 @Tag(name="Контроллер продуктов", description = "позволяет получить список продуктов, фото продукта")
