@@ -14,6 +14,7 @@ import java.io.FileInputStream;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path = "/mobile/products")
 @AllArgsConstructor
 @Tag(name="Контроллер продуктов", description = "позволяет получить список продуктов, фото продукта")
@@ -36,7 +37,6 @@ public class ProductsController {
      */
     @Operation(summary = "Выдача картинки продукта", description = "выдаёт изображение из папки images/products")
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public @ResponseBody
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
         FileInputStream inputStream = new FileInputStream("images/products/" + pictureName);
         return IOUtils.toByteArray(inputStream);

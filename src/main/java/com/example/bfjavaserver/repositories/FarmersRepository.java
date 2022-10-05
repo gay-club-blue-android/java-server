@@ -4,4 +4,5 @@ import com.example.bfjavaserver.models.Farmer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FarmersRepository extends JpaRepository<Farmer, Integer> {
+    Farmer findByEmailAndPassword(String email, String password);
 }
