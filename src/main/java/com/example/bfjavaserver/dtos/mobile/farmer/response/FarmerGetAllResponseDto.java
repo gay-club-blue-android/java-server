@@ -1,8 +1,5 @@
 package com.example.bfjavaserver.dtos.mobile.farmer.response;
 
-import com.example.bfjavaserver.models.FarmerDeliveryType;
-
-import javax.persistence.*;
 import lombok.Data;
 
 @Data

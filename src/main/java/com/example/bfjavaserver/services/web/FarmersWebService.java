@@ -1,7 +1,6 @@
 package com.example.bfjavaserver.services.web;
 
 import com.example.bfjavaserver.controllers.shared.CustomException;
-import com.example.bfjavaserver.dtos.mobile.responses.ClientResponseDto;
 import com.example.bfjavaserver.dtos.web.reponses.FarmerAuthResponseDto;
 import com.example.bfjavaserver.dtos.web.requests.FarmerAuthRequestDto;
 import com.example.bfjavaserver.models.Farmer;

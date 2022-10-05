@@ -27,7 +27,6 @@ public class ProductsCategoriesController {
     @Operation(summary = "Выдача списка категорий продуктов", description = "возвращает все категории из базы данных")
     @GetMapping(value = "/getAll")
     public List<ProductCategoryGetAllResponseDto> getAll() {
-        //var a = productsCategoriesService.getAll();
         return productsCategoriesService.getAll();
     }
     /**

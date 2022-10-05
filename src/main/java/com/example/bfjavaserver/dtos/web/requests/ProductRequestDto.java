@@ -1,6 +1,5 @@
 package com.example.bfjavaserver.dtos.web.requests;
 
-import com.example.bfjavaserver.dtos.mobile.responses.FarmerResponseDto;
 import lombok.Data;
 
 @Data
