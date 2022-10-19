@@ -28,7 +28,6 @@ public class ClientsController {
     @PostMapping(value = "/authByEmailAndPassword")
     public ClientAuthByEmailAndPasswordResponseDto authByEmailAndPassword(@RequestBody @Valid @Parameter(description = "сущность,содержащая email и пароль клиента") ClientAuthByEmailAndPasswordRequestDto clientAuthByEmailAndPasswordRequestDto) throws Exception {
 
-
         return clientsService.authByEmailAndPassword(clientAuthByEmailAndPasswordRequestDto);
     }
 }

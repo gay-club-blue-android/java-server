@@ -26,7 +26,12 @@ public class ProductsController {
     @Operation(summary = "Выдача всех продуктов", description = "возвращает все продукты из базы данных")
     @GetMapping(value = "/getAllByCategoryId/{id}")
     public List<ProductGetAllResponseDto> getAll(@PathVariable int id){
-        return productsService.getAllByCategoryId(id);
+
+        List<ProductGetAllResponseDto> result = productsService.getAllByCategoryId(id);
+
+        System.out.println(String.format("REQUEST ProductsController getAllByCategoryId INPUT:%d OUTPUT:%s \n\n", id, result.toString()));
+
+        return result;
     }
     /**
      * выдаёт изображение из папки images/products
@@ -37,6 +42,9 @@ public class ProductsController {
     @Operation(summary = "Выдача картинки продукта", description = "выдаёт изображение из папки images/products")
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
+
+        System.out.println(String.format("REQUEST ProductsController getPictureByName INPUT:%s\n\n",pictureName));
+
         FileInputStream inputStream = new FileInputStream("images/products/" + pictureName);
         return IOUtils.toByteArray(inputStream);
     }

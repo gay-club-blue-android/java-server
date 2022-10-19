@@ -29,6 +29,11 @@ public class AppsController {
     @Operation(summary = "авторизация риложения", description = "Проверяет сущетсвует ли приложение с переданными  логином и паролем и, если существует, удаляет все предыдущие api-ключи этого приложения и создаёт новый")
     @PostMapping(value = "/authByLoginAndPassword")
     public AppAuthByLoginAndPasswordResponseDto authByLoginAndPassword(@RequestBody @Valid @Parameter(description = "сущность,содержащая логин, пароль и уникальный номер девайса") AppAuthByLoginAndPasswordRequestDto appAuthByLoginAndPasswordRequestDto) throws Exception {
-        return appsService.authByLoginAndPassword(appAuthByLoginAndPasswordRequestDto);
+
+        AppAuthByLoginAndPasswordResponseDto result = appsService.authByLoginAndPassword(appAuthByLoginAndPasswordRequestDto);
+
+        System.out.println(String.format("REQUEST AppsController authByLoginAndPassword INPUT:%s OUTPUT:%s \n\n", appAuthByLoginAndPasswordRequestDto.toString(), result.toString()));
+
+        return result;
     }
 }
