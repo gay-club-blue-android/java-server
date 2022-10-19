@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequestMapping(path = "/mobile/farmers")
 @AllArgsConstructor
 @Tag(name="Контроллер фермеров", description = "позволяет получить список фермеров, аватар фермера")
+@Slf4j
 public class FarmersMobileController {
     private FarmersMobileService farmersMobileService;
 
@@ -27,7 +29,14 @@ public class FarmersMobileController {
     @Operation(summary = "выдача списка фермеров", description = "возвращает всех фермеров из базы данных")
     @GetMapping(value = "/getAll")
     public List<FarmerGetAllResponseDto> getAll(){
-        return farmersMobileService.getAll();
+
+        log.debug("INPUT:{}", "none");
+
+        List<FarmerGetAllResponseDto> result = farmersMobileService.getAll();
+
+        log.debug("OUTPUT:{}", result);
+
+        return result;
     }
 
     /**
@@ -40,6 +49,9 @@ public class FarmersMobileController {
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public @ResponseBody
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
+
+        log.debug("INPUT:{}", pictureName);
+
         FileInputStream inputStream = new FileInputStream("images/farmers/" + pictureName);
         return IOUtils.toByteArray(inputStream);
     }

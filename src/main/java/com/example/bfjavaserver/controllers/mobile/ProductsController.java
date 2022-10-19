@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.List;
 @RequestMapping(path = "/mobile/products")
 @AllArgsConstructor
 @Tag(name="Контроллер продуктов", description = "позволяет получить список продуктов, фото продукта")
+@Slf4j
 public class ProductsController {
     private ProductsService productsService;
     /**
@@ -25,11 +27,13 @@ public class ProductsController {
      */
     @Operation(summary = "Выдача всех продуктов", description = "возвращает все продукты из базы данных")
     @GetMapping(value = "/getAllByCategoryId/{id}")
-    public List<ProductGetAllResponseDto> getAll(@PathVariable int id){
+    public List<ProductGetAllResponseDto> getAllByCategoryId(@PathVariable int id){
+
+        log.debug("INPUT:{}",id);
 
         List<ProductGetAllResponseDto> result = productsService.getAllByCategoryId(id);
 
-        System.out.println(String.format("REQUEST ProductsController getAllByCategoryId INPUT:%d OUTPUT:%s \n\n", id, result.toString()));
+        log.debug("OUTPUT:{}",result);
 
         return result;
     }
@@ -43,7 +47,7 @@ public class ProductsController {
     @GetMapping(value = "/getPictureByName/{pictureName}", produces = MediaType.IMAGE_JPEG_VALUE)
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
 
-        System.out.println(String.format("REQUEST ProductsController getPictureByName INPUT:%s\n\n",pictureName));
+        log.debug("INPUT:{}",pictureName);
 
         FileInputStream inputStream = new FileInputStream("images/products/" + pictureName);
         return IOUtils.toByteArray(inputStream);

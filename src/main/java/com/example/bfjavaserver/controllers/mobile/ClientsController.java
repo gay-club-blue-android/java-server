@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import javax.validation.Valid;
 @RequestMapping(path = "/mobile/clients")
 @AllArgsConstructor
 @Tag(name="Контроллер клиентов", description = "проводит авторизацию клиентов")
+@Slf4j
 public class ClientsController {
     private final ClientsService clientsService;
 
@@ -28,6 +30,12 @@ public class ClientsController {
     @PostMapping(value = "/authByEmailAndPassword")
     public ClientAuthByEmailAndPasswordResponseDto authByEmailAndPassword(@RequestBody @Valid @Parameter(description = "сущность,содержащая email и пароль клиента") ClientAuthByEmailAndPasswordRequestDto clientAuthByEmailAndPasswordRequestDto) throws Exception {
 
-        return clientsService.authByEmailAndPassword(clientAuthByEmailAndPasswordRequestDto);
+        log.debug("INPUT:{}",clientAuthByEmailAndPasswordRequestDto);
+
+        ClientAuthByEmailAndPasswordResponseDto result = clientsService.authByEmailAndPassword(clientAuthByEmailAndPasswordRequestDto);
+
+        log.debug("OUTPUT:{}",result);
+
+        return result;
     }
 }

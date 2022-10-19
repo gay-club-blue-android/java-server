@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import javax.validation.Valid;
 @RequestMapping(path = "/mobile/apps")
 @AllArgsConstructor
 @Tag(name = "Контроллер приложений", description = "проводит авторизацию приложений (не пользователей)")
+@Slf4j
 public class AppsController {
     private final AppsService appsService;
 
@@ -30,9 +32,11 @@ public class AppsController {
     @PostMapping(value = "/authByLoginAndPassword")
     public AppAuthByLoginAndPasswordResponseDto authByLoginAndPassword(@RequestBody @Valid @Parameter(description = "сущность,содержащая логин, пароль и уникальный номер девайса") AppAuthByLoginAndPasswordRequestDto appAuthByLoginAndPasswordRequestDto) throws Exception {
 
+        log.debug("INPUT:{}",appAuthByLoginAndPasswordRequestDto);
+
         AppAuthByLoginAndPasswordResponseDto result = appsService.authByLoginAndPassword(appAuthByLoginAndPasswordRequestDto);
 
-        System.out.println(String.format("REQUEST AppsController authByLoginAndPassword INPUT:%s OUTPUT:%s \n\n", appAuthByLoginAndPasswordRequestDto.toString(), result.toString()));
+        log.debug("OUTPUT:{}",result);
 
         return result;
     }
