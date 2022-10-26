@@ -28,11 +28,11 @@ public class FaqsController {
     @GetMapping(value = "/getAll")
     public List<FaqGetAllResponseDto> getAll(){
 
-        log.debug("INPUT:{}", "none");
+        log.info("INPUT:{}", "none");
 
         List<FaqGetAllResponseDto> result = faqsService.getAll();
 
-        log.debug("OUTPUT:{}", result);
+        log.info("OUTPUT:{}", result);
 
         return result;
     }

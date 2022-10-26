@@ -31,11 +31,11 @@ public class ProductsCategoriesController {
     @GetMapping(value = "/getAll")
     public List<ProductCategoryGetAllResponseDto> getAll() {
 
-        log.debug("INPUT:{}", "none");
+        log.info("INPUT:{}", "none");
 
         List<ProductCategoryGetAllResponseDto> result = productsCategoriesService.getAll();
 
-        log.debug("OUTPUT:{}", result);
+        log.info("OUTPUT:{}", result);
 
         return result;
     }

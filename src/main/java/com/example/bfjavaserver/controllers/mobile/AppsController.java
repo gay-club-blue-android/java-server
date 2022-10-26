@@ -32,11 +32,11 @@ public class AppsController {
     @PostMapping(value = "/authByLoginAndPassword")
     public AppAuthByLoginAndPasswordResponseDto authByLoginAndPassword(@RequestBody @Valid @Parameter(description = "сущность,содержащая логин, пароль и уникальный номер девайса") AppAuthByLoginAndPasswordRequestDto appAuthByLoginAndPasswordRequestDto) throws Exception {
 
-        log.debug("INPUT:{}",appAuthByLoginAndPasswordRequestDto);
+        log.info("INPUT:{}",appAuthByLoginAndPasswordRequestDto);
 
         AppAuthByLoginAndPasswordResponseDto result = appsService.authByLoginAndPassword(appAuthByLoginAndPasswordRequestDto);
 
-        log.debug("OUTPUT:{}",result);
+        log.info("OUTPUT:{}",result);
 
         return result;
     }

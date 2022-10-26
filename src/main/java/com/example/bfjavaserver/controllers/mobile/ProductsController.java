@@ -29,11 +29,11 @@ public class ProductsController {
     @GetMapping(value = "/getAllByCategoryId/{id}")
     public List<ProductGetAllResponseDto> getAllByCategoryId(@PathVariable int id){
 
-        log.debug("INPUT:{}",id);
+        log.info("INPUT:{}",id);
 
         List<ProductGetAllResponseDto> result = productsService.getAllByCategoryId(id);
 
-        log.debug("OUTPUT:{}",result);
+        log.info("OUTPUT:{}",result);
 
         return result;
     }

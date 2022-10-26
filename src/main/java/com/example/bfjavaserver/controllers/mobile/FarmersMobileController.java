@@ -30,11 +30,11 @@ public class FarmersMobileController {
     @GetMapping(value = "/getAll")
     public List<FarmerGetAllResponseDto> getAll(){
 
-        log.debug("INPUT:{}", "none");
+        log.info("INPUT:{}", "none");
 
         List<FarmerGetAllResponseDto> result = farmersMobileService.getAll();
 
-        log.debug("OUTPUT:{}", result);
+        log.info("OUTPUT:{}", result);
 
         return result;
     }
@@ -50,7 +50,7 @@ public class FarmersMobileController {
     public @ResponseBody
     byte[] getPictureByName(@PathVariable @Parameter(description = "название файла картинки") String pictureName) throws Exception {
 
-        log.debug("INPUT:{}", pictureName);
+        log.info("INPUT:{}", pictureName);
 
         FileInputStream inputStream = new FileInputStream("images/farmers/" + pictureName);
         return IOUtils.toByteArray(inputStream);
