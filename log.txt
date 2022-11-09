@@ -1,58 +1,430 @@
-"2022-10-26 21:07:51 [34mINFO [0;39m c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 36983 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
-""2022-10-26 21:07:51 [39mDEBUG[0;39m c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
-""2022-10-26 21:07:51 [34mINFO [0;39m c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
-""2022-10-26 21:07:52 [34mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2022-10-26 21:07:52 [34mINFO [0;39m o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 11 JPA repository interfaces.
-""2022-10-26 21:07:52 [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
-""2022-10-26 21:07:52 [34mINFO [0;39m o.a.catalina.core.StandardService log - Starting service [Tomcat]
-""2022-10-26 21:07:52 [34mINFO [0;39m o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
-""2022-10-26 21:07:52 [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-""2022-10-26 21:07:52 [34mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1137 ms
-""2022-10-26 21:07:53 [34mINFO [0;39m com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-""2022-10-26 21:07:53 [34mINFO [0;39m com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-""2022-10-26 21:07:53 [34mINFO [0;39m o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-""2022-10-26 21:07:53 [34mINFO [0;39m org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
-""2022-10-26 21:07:53 [34mINFO [0;39m o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2022-10-26 21:07:53 [34mINFO [0;39m org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-""2022-10-26 21:07:54 [34mINFO [0;39m o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2022-10-26 21:07:54 [34mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2022-10-26 21:07:54 [31mWARN [0;39m o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-""2022-10-26 21:07:55 [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
-""2022-10-26 21:07:55 [34mINFO [0;39m c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 3.836 seconds (JVM running for 4.363)
-""2022-10-26 21:08:12 [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2022-10-26 21:08:12 [34mINFO [0;39m o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-""2022-10-26 21:08:12 [34mINFO [0;39m o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
-""2022-10-26 21:08:12 [39mDEBUG[0;39m c.e.b.c.m.ProductsCategoriesController getAll - INPUT:none
-""2022-10-26 21:08:12 [39mDEBUG[0;39m c.e.b.c.m.ProductsCategoriesController getAll - OUTPUT:[ProductCategoryGetAllResponseDto(id=3, name=Молоко, pictureName=milk.jpg), ProductCategoryGetAllResponseDto(id=4, name=Мясо, pictureName=meet.jpg)]
-""2022-10-26 21:09:11 [34mINFO [0;39m o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-""2022-10-26 21:09:11 [34mINFO [0;39m com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-""2022-10-26 21:09:11 [34mINFO [0;39m com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
-"2022-10-26 21:09:31 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 37043 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
-2022-10-26 21:09:31 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
-2022-10-26 21:09:31 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
-2022-10-26 21:09:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-26 21:09:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 62 ms. Found 11 JPA repository interfaces.
-2022-10-26 21:09:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
-2022-10-26 21:09:32 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
-2022-10-26 21:09:32 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-10-26 21:09:32 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
-2022-10-26 21:09:32 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1077 ms
-2022-10-26 21:09:32 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
-2022-10-26 21:09:32 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2022-10-26 21:09:32 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-26 21:09:32 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
-2022-10-26 21:09:32 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-26 21:09:32 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-10-26 21:09:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-26 21:09:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 21:09:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-26 21:09:34 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
-2022-10-26 21:09:34 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 3.74 seconds (JVM running for 4.217)
-2022-10-26 21:09:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-26 21:09:41 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
-2022-10-26 21:09:41 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2022-10-26 21:09:41 DEBUG c.e.b.c.m.ProductsCategoriesController getAll - INPUT:none
-2022-10-26 21:09:41 DEBUG c.e.b.c.m.ProductsCategoriesController getAll - OUTPUT:[ProductCategoryGetAllResponseDto(id=3, name=Молоко, pictureName=milk.jpg), ProductCategoryGetAllResponseDto(id=4, name=Мясо, pictureName=meet.jpg)]
-2022-10-26 21:13:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-26 21:13:55 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2022-10-26 21:13:55 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:04:09 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25295 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:04:09 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:04:09 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:04:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:04:10 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 79 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:04:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:04:10 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:04:10 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:04:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:04:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1736 ms
+2022-11-09 20:04:10 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:04:11 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:04:11 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:04:11 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:04:11 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:04:11 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:04:12 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:04:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:04:13 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:04:13 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:04:13 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 5.401 seconds (JVM running for 6.124)
+2022-11-09 20:07:49 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:07:49 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:07:49 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2022-11-09 20:09:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:09:30 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:09:30 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:13:21 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25701 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:13:21 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:13:21 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:13:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:13:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 59 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:13:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:13:22 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:13:22 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:13:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:13:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1555 ms
+2022-11-09 20:13:22 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:13:22 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:13:23 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:13:23 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:13:23 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:13:23 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:13:23 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:13:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:13:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:13:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:13:25 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: 93b878e1-7072-4988-9c50-80c32c55ac9a
+
+2022-11-09 20:13:25 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d35ff7b, org.springframework.security.web.context.SecurityContextPersistenceFilter@35ceec81, org.springframework.security.web.header.HeaderWriterFilter@2965dd88, org.springframework.security.web.csrf.CsrfFilter@714bffd5, org.springframework.security.web.authentication.logout.LogoutFilter@11adab6d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@654b899f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@70697478, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ef31221, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2f0cab82, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c8df667, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@be616f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e9e0c6, org.springframework.security.web.session.SessionManagementFilter@51141f64, org.springframework.security.web.access.ExceptionTranslationFilter@4fc3529, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c69e1e1]
+2022-11-09 20:13:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:13:25 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.996 seconds (JVM running for 5.596)
+2022-11-09 20:13:53 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:13:53 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:13:53 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:16:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:16:34 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:16:34 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:17:08 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25754 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:17:08 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:17:08 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:17:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:17:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 53 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:17:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:17:09 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:17:09 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:17:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:17:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1278 ms
+2022-11-09 20:17:10 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:17:10 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:17:10 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:17:10 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:17:10 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:17:10 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:17:10 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:17:11 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:17:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:17:11 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:17:12 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: d272d34f-32c8-4d0a-8dd8-3f0393b58f78
+
+2022-11-09 20:17:12 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5342eec5, org.springframework.security.web.context.SecurityContextPersistenceFilter@37c87fcc, org.springframework.security.web.header.HeaderWriterFilter@498e41a4, org.springframework.security.web.csrf.CsrfFilter@738a39cc, org.springframework.security.web.authentication.logout.LogoutFilter@21540255, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@714c74eb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@129b69b2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@60e47aab, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@eb91027, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78f5cbc5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b43a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@261a66b8, org.springframework.security.web.session.SessionManagementFilter@1f5d7fd5, org.springframework.security.web.access.ExceptionTranslationFilter@32c0fecc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e5b33e5]
+2022-11-09 20:17:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:17:12 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.332 seconds (JVM running for 4.874)
+2022-11-09 20:17:17 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:17:17 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:17:17 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2022-11-09 20:19:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:19:56 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:19:56 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:21:21 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25821 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:21:21 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:21:21 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:21:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:21:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 66 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:21:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:21:22 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:21:22 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:21:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:21:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1188 ms
+2022-11-09 20:21:22 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:21:22 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:21:22 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:21:22 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:21:23 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:21:23 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:21:23 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:21:23 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:21:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:21:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:21:24 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: c1680685-8b61-4b29-a89d-a587a6e57d96
+
+2022-11-09 20:21:25 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@588d630d, org.springframework.security.web.context.SecurityContextPersistenceFilter@be616f0, org.springframework.security.web.header.HeaderWriterFilter@35ceec81, org.springframework.security.web.csrf.CsrfFilter@5f3ddc86, org.springframework.security.web.authentication.logout.LogoutFilter@5d58dc61, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6dc9a56e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@70ee1963, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@eb91027, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e9e0c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cf08c97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ca2be53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@459d2ee6, org.springframework.security.web.session.SessionManagementFilter@7c8df667, org.springframework.security.web.access.ExceptionTranslationFilter@2965dd88, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39b85a73]
+2022-11-09 20:21:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:21:25 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.239 seconds (JVM running for 4.757)
+2022-11-09 20:21:40 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:21:40 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:21:40 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2022-11-09 20:23:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:23:51 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:23:51 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:24:04 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25875 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:24:04 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:24:04 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:24:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:24:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 81 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:24:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:24:05 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:24:05 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:24:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:24:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1398 ms
+2022-11-09 20:24:06 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:24:06 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:24:06 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:24:06 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:24:06 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:24:07 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:24:07 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:24:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:24:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:24:08 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:24:09 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: a372f6aa-8cc6-4d33-8810-62d5a8ea4e95
+
+2022-11-09 20:24:09 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e5e2e06, org.springframework.security.web.context.SecurityContextPersistenceFilter@78ab63b5, org.springframework.security.web.header.HeaderWriterFilter@7ab2e018, org.springframework.security.web.csrf.CsrfFilter@3183a37c, org.springframework.security.web.authentication.logout.LogoutFilter@227fc322, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6dd1f239, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@69ae7632, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@26c1f3eb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6097f225, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a56f608, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2809e38a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79982bcc, org.springframework.security.web.session.SessionManagementFilter@468eff41, org.springframework.security.web.access.ExceptionTranslationFilter@1fc386f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19542115]
+2022-11-09 20:24:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:24:09 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 5.419 seconds (JVM running for 6.837)
+2022-11-09 20:24:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:24:24 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:24:24 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2022-11-09 20:24:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:24:59 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:24:59 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:25:04 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 25889 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:25:04 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:25:04 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:25:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:25:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 89 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:25:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:25:06 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:25:06 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:25:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:25:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1226 ms
+2022-11-09 20:25:06 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:25:06 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:25:06 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:25:06 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:25:06 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:25:06 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:25:06 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:25:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:25:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:25:07 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:25:08 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: 85db8a50-571c-46ac-a3cd-b1305113da46
+
+2022-11-09 20:25:08 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b2db389, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e0652ab, org.springframework.security.web.header.HeaderWriterFilter@42b43a6, org.springframework.security.web.csrf.CsrfFilter@4fc3529, org.springframework.security.web.authentication.logout.LogoutFilter@3e6acec2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@588d630d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2152fde5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@45f1413c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7884f722, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@129b69b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eb1d475, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a139347, org.springframework.security.web.session.SessionManagementFilter@4b9f7edc, org.springframework.security.web.access.ExceptionTranslationFilter@37c87fcc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@714c74eb]
+2022-11-09 20:25:08 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:25:08 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.149 seconds (JVM running for 4.707)
+2022-11-09 20:25:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:25:16 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:25:16 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 3 ms
+2022-11-09 20:25:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:25:23 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:25:23 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:28:53 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26001 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:28:53 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:28:53 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:28:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:28:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 50 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:28:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:28:54 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:28:54 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:28:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:28:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1292 ms
+2022-11-09 20:28:54 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:28:54 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:28:55 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:28:55 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:28:55 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:28:55 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:28:55 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:28:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:28:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:28:56 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:28:57 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: 13139392-508f-4e70-8a81-db8643ccd5c6
+
+2022-11-09 20:28:57 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e85dcb2, org.springframework.security.web.context.SecurityContextPersistenceFilter@eb1d475, org.springframework.security.web.header.HeaderWriterFilter@2e0652ab, org.springframework.security.web.csrf.CsrfFilter@2965dd88, org.springframework.security.web.authentication.logout.LogoutFilter@1f1fbc9f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60e47aab, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@21540255, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1b28cff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a139347, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@718f3088, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11bfd751, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73dbe25, org.springframework.security.web.session.SessionManagementFilter@129b69b2, org.springframework.security.web.access.ExceptionTranslationFilter@42b43a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d35ff7b]
+2022-11-09 20:28:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:28:57 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.597 seconds (JVM running for 5.145)
+2022-11-09 20:38:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:38:07 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:38:07 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:39:59 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26132 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:39:59 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:39:59 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:40:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:40:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 57 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:40:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:40:01 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:40:01 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:40:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:40:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1202 ms
+2022-11-09 20:40:01 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:40:01 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:40:01 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:40:01 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:40:01 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:40:01 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:40:01 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:40:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:40:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:40:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:40:03 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: e3597d3f-8a53-44d1-88bc-604fa2f004bc
+
+2022-11-09 20:40:03 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e9e0c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c8df667, org.springframework.security.web.header.HeaderWriterFilter@51141f64, org.springframework.security.web.csrf.CsrfFilter@4491eaeb, org.springframework.security.web.authentication.logout.LogoutFilter@29519337, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13f4048e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1d622556, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1a819901, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d35ff7b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@be616f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cf08c97, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@588d630d, org.springframework.security.web.session.SessionManagementFilter@35ceec81, org.springframework.security.web.access.ExceptionTranslationFilter@192f5f39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bc6c20d]
+2022-11-09 20:40:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:40:03 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.216 seconds (JVM running for 4.736)
+2022-11-09 20:40:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:40:13 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:40:13 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:43:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:43:13 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:43:13 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:43:25 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26206 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:43:25 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:43:25 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:43:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:43:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 65 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:43:26 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:43:26 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:43:26 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:43:26 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:43:26 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1184 ms
+2022-11-09 20:43:26 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:43:26 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:43:26 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:43:26 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:43:27 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:43:27 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:43:27 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:43:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:43:28 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:43:28 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: edd8d89c-47a7-4626-b60c-06db3bd04cd5
+
+2022-11-09 20:43:28 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30a01dd8, org.springframework.security.web.context.SecurityContextPersistenceFilter@43ab0659, org.springframework.security.web.header.HeaderWriterFilter@74830d73, org.springframework.security.web.csrf.CsrfFilter@6e49b011, org.springframework.security.web.authentication.logout.LogoutFilter@2965dd88, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8d810f2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@738a39cc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1f68e4e8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@283e1759, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25421809, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ac9b66b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47b4ac83, org.springframework.security.web.session.SessionManagementFilter@4c41a177, org.springframework.security.web.access.ExceptionTranslationFilter@5e8f0f98, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25216999]
+2022-11-09 20:43:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:43:28 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.097 seconds (JVM running for 4.565)
+2022-11-09 20:43:33 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:43:33 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:43:33 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:45:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:45:17 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:45:17 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:45:22 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26246 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:45:22 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:45:22 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:45:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:45:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 74 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:45:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:45:23 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:45:23 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:45:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:45:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1297 ms
+2022-11-09 20:45:23 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:45:24 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:45:24 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:45:24 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:45:24 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:45:24 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:45:25 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:45:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:45:26 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:45:26 INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration getOrDeducePassword - 
+
+Using generated security password: 4bfdd8f6-8d33-414a-b3b3-363f8cf5d0f6
+
+2022-11-09 20:45:26 INFO  o.s.s.web.DefaultSecurityFilterChain <init> - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f68e4e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@644947ee, org.springframework.security.web.header.HeaderWriterFilter@1827fc4e, org.springframework.security.web.csrf.CsrfFilter@3a709cc7, org.springframework.security.web.authentication.logout.LogoutFilter@3221588e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@537b3be1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42e202d7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@47b4ac83, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2acb1264, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@714bffd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4491eaeb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@351ede23, org.springframework.security.web.session.SessionManagementFilter@2faf6e4a, org.springframework.security.web.access.ExceptionTranslationFilter@6bf0f70a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77e6761f]
+2022-11-09 20:45:27 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:45:27 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.849 seconds (JVM running for 5.64)
+2022-11-09 20:45:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:45:51 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:45:51 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:46:38 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26282 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:46:38 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:46:38 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:46:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:46:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 74 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:46:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:46:39 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:46:39 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:46:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:46:39 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1396 ms
+2022-11-09 20:46:39 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:46:40 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:46:40 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:46:40 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:46:40 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:46:40 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:46:40 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:46:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:46:41 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:46:42 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:46:42 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.269 seconds (JVM running for 4.859)
+2022-11-09 20:46:56 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:46:56 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:46:56 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:46:57 INFO  c.e.b.c.mobile.AppsController authByLoginAndPassword - INPUT:AppAuthByLoginAndPasswordRequestDto(login=web, password=12345, deviceId=WEB_APP)
+2022-11-09 20:46:57 INFO  c.e.b.c.mobile.AppsController authByLoginAndPassword - OUTPUT:AppAuthByLoginAndPasswordResponseDto(apiKey=e0039217085be67cc980cb6578c4ce27a1cca6d9b8537595e41a5898256652d7)
+2022-11-09 20:48:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:48:52 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:48:52 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:48:57 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26309 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:48:57 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:48:57 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:48:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:48:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 60 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:48:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:48:58 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:48:58 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:48:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:48:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1124 ms
+2022-11-09 20:48:59 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:48:59 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:48:59 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:48:59 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:48:59 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:48:59 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:49:00 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:49:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:49:01 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:49:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:49:01 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.096 seconds (JVM running for 4.594)
+2022-11-09 20:49:07 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:49:07 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:49:07 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:49:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:49:25 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:49:25 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:49:52 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26328 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:49:52 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:49:52 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:49:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:49:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 74 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:49:53 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:49:53 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:49:53 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:49:53 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:49:53 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1391 ms
+2022-11-09 20:49:53 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:49:53 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:49:54 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:49:54 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:49:54 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:49:54 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:49:54 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:49:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:49:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:49:55 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:49:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:49:56 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.486 seconds (JVM running for 5.018)
+2022-11-09 20:50:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:50:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:50:03 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2022-11-09 20:50:03 INFO  c.e.b.c.mobile.AppsController authByLoginAndPassword - INPUT:AppAuthByLoginAndPasswordRequestDto(login=web, password=12345, deviceId=5872bab9-d06c-4246-b4c6-306fcf357b50)
+2022-11-09 20:50:04 INFO  c.e.b.c.mobile.AppsController authByLoginAndPassword - OUTPUT:AppAuthByLoginAndPasswordResponseDto(apiKey=925ed186274144d2fab8155e84a7463d4c96586f3ab94f4841ae5b85cd983a00)
+2022-11-09 20:51:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:51:16 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 20:51:16 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2022-11-09 20:51:21 INFO  c.e.b.BfJavaServerApplication logStarting - Starting BfJavaServerApplication using Java 1.8.0_221 on MBP-Aleksej with PID 26355 (/Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server/target/classes started by smyslov in /Users/smyslov/Documents/ProgrammingProjects/IdeaProjects/bf-java-server)
+2022-11-09 20:51:21 DEBUG c.e.b.BfJavaServerApplication logStarting - Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-11-09 20:51:21 INFO  c.e.b.BfJavaServerApplication logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2022-11-09 20:51:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-09 20:51:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 59 ms. Found 11 JPA repository interfaces.
+2022-11-09 20:51:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8040 (http)
+2022-11-09 20:51:22 INFO  o.a.catalina.core.StandardService log - Starting service [Tomcat]
+2022-11-09 20:51:22 INFO  o.a.catalina.core.StandardEngine log - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-09 20:51:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring embedded WebApplicationContext
+2022-11-09 20:51:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1170 ms
+2022-11-09 20:51:22 DEBUG c.e.b.c.shared.SimpleCORSFilter init - Filter 'simpleCORSFilter' configured for use
+2022-11-09 20:51:22 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2022-11-09 20:51:23 INFO  com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2022-11-09 20:51:23 INFO  o.h.jpa.internal.util.LogHelper logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-09 20:51:23 INFO  org.hibernate.Version logVersion - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-11-09 20:51:23 INFO  o.h.annotations.common.Version <clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-09 20:51:23 INFO  org.hibernate.dialect.Dialect <init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-09 20:51:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-09 20:51:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 20:51:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-09 20:51:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer start - Tomcat started on port(s): 8040 (http) with context path ''
+2022-11-09 20:51:25 INFO  c.e.b.BfJavaServerApplication logStarted - Started BfJavaServerApplication in 4.159 seconds (JVM running for 4.693)
+2022-11-09 20:52:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-09 20:52:23 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-11-09 20:52:23 INFO  o.s.web.servlet.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2022-11-09 21:07:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-09 21:07:41 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2022-11-09 21:07:41 INFO  com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.

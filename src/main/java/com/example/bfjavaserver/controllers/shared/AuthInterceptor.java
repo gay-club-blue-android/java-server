@@ -1,15 +1,12 @@
 package com.example.bfjavaserver.controllers.shared;
 
-import com.example.bfjavaserver.models.AppApiKey;
+
 import com.example.bfjavaserver.services.mobile.AppsApiKeysService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 
 @AllArgsConstructor
 public class AuthInterceptor implements HandlerInterceptor {
@@ -50,4 +47,5 @@ public class AuthInterceptor implements HandlerInterceptor {
 
         //return true;
     }
+
 }
